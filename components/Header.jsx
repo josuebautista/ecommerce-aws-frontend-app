@@ -1,8 +1,11 @@
-import Link from 'next/link'
-import React from 'react'
+import { useGlobalContext } from '@/utils/Context';
+import Link from 'next/link';
+import React from 'react';
 
 
 const Header = () => {
+  const { cartProducts } = useGlobalContext();
+
   return (
     <div className='w-full flex justify-center bg-[#222]'>
       <div className='w-11/12 text-white py-6'>
@@ -13,7 +16,7 @@ const Header = () => {
             <Link className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/products'}>All products</Link>
             <Link className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/categories'}>Categories</Link>
             <Link className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/account'}>Account</Link>
-            <Link className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/cart'}>Cart (0)</Link>
+            <Link className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/cart'}>Cart ({cartProducts !== null ? cartProducts.length : '0'})</Link>
           </nav>
         </div>
       </div>

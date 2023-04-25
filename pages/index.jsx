@@ -6,7 +6,7 @@ import NewProducts from "@/components/NewProducts"
 const Home = ({ featuredProduct, newProducts }) => {
   
   return (
-    <main className='w-screen h-screen'>
+    <main className='w-screen h-screen bg-slate-100 overflow-x-hidden'>
       <Header />
       {featuredProduct && (
         <Feature product={featuredProduct} />
