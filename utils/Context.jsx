@@ -7,7 +7,7 @@ const AppProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState(null);
   const [products, setProduts] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
-
+  
   //Form Cart
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -77,6 +77,17 @@ const AppProvider = ({ children }) => {
     setTotalPrice(total);
   }
 
+  const resetValues = () => {
+    localStorage.removeItem('cart');
+    setName('');
+    setEmail('');
+    setCity('');
+    setPostalCode('');
+    setStreetAddress('');
+    setCountry('');
+    setCartProducts(null);
+  }
+
   return <AppContext.Provider value={{
     cartProducts,
     setCartProducts,
@@ -92,6 +103,7 @@ const AppProvider = ({ children }) => {
     postalCode, setPostalCode,
     streetAddress, setStreetAddress,
     country, setCountry,
+    resetValues,
   }} >
     {children}
   </AppContext.Provider>

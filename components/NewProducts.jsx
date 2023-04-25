@@ -3,7 +3,6 @@ import CardProduct from './CardProduct';
 
 const NewProducts = ({ products }) => {
 
-  console.log(products);
   return (
     <div className='w-full overflow-x-hidden my-4 flex justify-center bg-slate-100'>
       <div className="container py-4">
