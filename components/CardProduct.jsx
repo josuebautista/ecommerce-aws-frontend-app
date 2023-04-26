@@ -2,15 +2,23 @@ import React from 'react'
 import Image from 'next/image';
 import { HiShoppingCart } from "react-icons/hi2";
 import { useGlobalContext } from '@/utils/Context';
+import { useRouter } from 'next/router';
 
 const CardProduct = ({ product }) => {
+  const router = useRouter();
   const { addProductToCart } = useGlobalContext();
+
+  const goToProduct = (id) => {
+    router.push('/product/' + id)
+  }
   return (
     <div>
-      <div className='p-3 bg-white rounded-xl'>
-        <div className="h-44 flex justify-center">
-          <Image width={400} height={400} src={product.images[0]} alt={product.title} className='object-contain' priority />
-        </div>
+      <div className='p-3 bg-white rounded-xl '>
+        <button onClick={() => goToProduct(product._id)} className='hover:-translate-y-2 hover:drop-shadow-[0_20px_35px_rgba(67,56,202,0.25)] active:drop-shadow-[0_20px_35px_rgba(67,56,202,0.50)]'>
+          <div className="h-44 flex justify-center ">
+            <Image width={400} height={400} src={product.images[0]} alt={product.title} className='object-contain' priority />
+          </div>
+        </button>
       </div>
       <div className="flex flex-col py-1 w-full ">
         <div className="div">{product.title}</div>
