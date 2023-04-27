@@ -67,7 +67,7 @@ const Header = () => {
               { session ? (
                   <Link onClick={() => setShowNav(false)} className='hover:text-white active:text-sky-300/80 transition duration-200' href={'/'}>Account</Link>
                 ) : (
-                  <button onClick={() => handleLogin()} className='hover:text-white active:text-sky-300/80 transition duration-200 pb-1' href={'/'}>Sign in</button>
+                  <button onClick={() => handleLogin()} className='hover:text-white active:text-sky-300/80 transition duration-200 pb-1 text-2xl' href={'/'}>Sign in</button>
                 )}
               <Link onClick={() => setShowNav(false)} className='hover:text-white active:text-sky-300/80 transition duration-200 p-5 text-2xl' href={'/cart'}>Cart ({cartProducts !== null ? cartProducts.length : '0'})</Link>
             </nav>
