@@ -6,7 +6,7 @@ const RowProduct = ({ product }) => {
   const { cartProducts, addItemProduct, removeItemProduct, getTotalPrice } = useGlobalContext();
   useEffect(() => {
     getTotalPrice();
-  }, []);
+  }, [cartProducts]);
 
   return (
     <tr className='border-t'>

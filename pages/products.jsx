@@ -1,9 +1,8 @@
+import React from 'react';
 import CardProduct from '@/components/CardProduct';
 import Header from '@/components/Header';
 import { mongooseConnect } from '@/lib/mongoose';
 import { Product } from '@/models/Product';
-import React from 'react';
-
 
 const products = ({ products }) => {
   return (

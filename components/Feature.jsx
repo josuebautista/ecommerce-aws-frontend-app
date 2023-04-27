@@ -14,10 +14,10 @@ const Feature = ({ product }) => {
   }
 
   return (
-    <div className='w-full flex justify-center bg-[#222] '>
+    <div className='w-full flex justify-center bg-[#222] pt-5'>
       <div className='w-10/12 mb-5'>
-        <div className="flex justify-center gap-1">
-          <div className="w-5/12 grid place-content-center gap-2">
+        <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col justify-center gap-1">
+          <div className="xl:w-5/12 lg:w-5/12 md:w-5/12 sm:w-full w-full grid place-content-center gap-2">
             <h1 className='text-5xl text-white my-2'>{product.title}</h1>
             <p className='text-white/75'>
               {product.description}
@@ -32,7 +32,7 @@ const Feature = ({ product }) => {
               </button>
             </div>
           </div>
-          <div className='w-7/12'>
+          <div className='xl:w-7/12 lg:w-7/12 md:w-7/12 sm:w-full w-full'>
             <Image src={feature} alt='feature' className='w-full' priority />
           </div>
         </div>

@@ -28,8 +28,8 @@ const Cart = () => {
       <Header />
       {cartProducts?.length > 0 ? (
         <div className='flex justify-center'>
-          <div className="w-11/12 flex flex-row gap-4 py-4">
-            <div className="w-2/3 h-full rounded-xl bg-white py-5 px-4">
+          <div className="xl:w-11/12 lg:w-11/12 md:w-11/12 sm:w-full w-full flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col gap-4 py-4">
+            <div className="xl:w-2/3 lg:w-2/3 md:w-2/3 sm:w-full w-full h-full rounded-xl bg-white py-5 px-4">
               <div className='font-bold text-3xl'>
                 Cart
               </div>
@@ -54,7 +54,7 @@ const Cart = () => {
                 <div className='text-xl font-semibold px-4'>${totalPrice}</div>
               </div>
             </div>
-            <div className="w-1/3 h-full rounded-xl bg-white py-5 px-4">
+            <div className="xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-full w-full h-full rounded-xl bg-white py-5 px-4">
               <div className='font-bold text-center pb-4'>
                 Order Information
               </div>
@@ -78,8 +78,8 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className='w-full h-full grid place-content-center overflow-x-hidden overflow-y-hidden'>
-          <div className='w-full bg-white p-5 rounded-xl mx-5'>
+        <div className='w-screen h-screen grid place-content-center overflow-x-hidden overflow-y-hidden'>
+          <div className='w-full bg-white p-5 rounded-xl'>
             <div className='text-center text-2xl'>Your Card is Empty</div>
             <div className='flex justify-center mt-5'>
               <button type='button' onClick={() => handleHome()} className='bg-indigo-700 hover:bg-indigo-600 active:bg-indigo-500 hover:translate-y-1 transition duration-200 text-white py-2 px-4 rounded-lg'>

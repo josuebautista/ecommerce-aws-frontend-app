@@ -8,7 +8,6 @@ import { HiShoppingCart } from 'react-icons/hi2'
 
 const ProductPage = ({ product }) => {
   const { addProductToCart } = useGlobalContext();
-  console.log(product)
   return (
     <main className='w-screen h-screen bg-slate-100 overflow-x-hidden'>
       <Header />
@@ -19,7 +18,7 @@ const ProductPage = ({ product }) => {
               <Image src={product.images[0]} alt={product.title} width={1000} height={1000} className='w-full bg-white rounded-xl' />
               <div className='w-full flex gap-1 mt-4'>
                 {product.images.map((picture, index) => (
-                  <div className='h-20 flex flex-wrap bg-white rounded-lg p-1'>
+                  <div key={index} className='h-20 flex flex-wrap bg-white rounded-lg p-1'>
                     <Image src={picture} alt={product.title + index} width={300} height={300} className='object-contain' />
                   </div>
                 ))}

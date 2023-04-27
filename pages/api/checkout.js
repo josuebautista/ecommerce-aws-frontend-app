@@ -31,7 +31,6 @@ const handler = async (req, res) => {
     }
   }
 
-  console.log(line_items)
 
   const orderDoc = await Order.create({
     line_items, name, email, city, postalCode, streetAddress, country, paid: false,

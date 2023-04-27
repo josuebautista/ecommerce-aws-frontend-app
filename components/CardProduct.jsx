@@ -26,7 +26,7 @@ const CardProduct = ({ product }) => {
           <div className="font-bold text-2xl">
             ${product.price}
           </div>
-          <div className='w-1/3 hover:w-5/12 '>
+          <div className='xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-1/2 w-1/2 hover:w-5/12 '>
             <button type='button' onClick={() => addProductToCart(product._id)} className='bg-indigo-700 hover:bg-indigo-600 active:bg-indigo-500 transition duration-200 text-white rounded-lg w-full flex justify-center py-2'>
               <HiShoppingCart size={20} className='mr-1' />
               Add
